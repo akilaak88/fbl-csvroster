@@ -3,9 +3,9 @@
 # Overview
 CSV Roster Application has been developed to implement a classroom roster file (.csv file), provided via a URL, into a relational database. 
 The database contains three tables:
-*	student (information about students)
-*	teacher (information about teachers)
-*	enrollment (information about which students are in which teachers' classes)
+*	Student (information about students)
+*	Teacher (information about teachers)
+*	Enrollment (information about which students are in which teachers' classes)
 
 # Context
 There are 4 types of CSV files handled in this application
@@ -25,17 +25,22 @@ This Application will take the URL of a CSV file as a command-line argument, alo
 7.	In addition - if any records are malformed, the program will provide an exception log of any records that is rejected.
 
 # Technical Details
-This application is developed in Spring Boot with Apache Maven for build.
-Language and JDK : Java 8
-Database: MySQL
-CSV Reader: Apache Commons CSV library
-JDBC: For Database Connectivity
+This application is developed using 
+* Spring Boot with Apache Maven for build
+
+* Language and JDK : Java 8
+
+* Database: MySQL
+
+* CSV Reader: Apache Commons CSV library
+
+* JDBC: For Database Connectivity
 
 # Assumptions
 -	The URL for CSV file should be public. If the CSV resides in a private URL or resides in a local directory, the file cannot be accessed through this application.
 -	The records will be rejected only if ASCII values are present in the first name or last name of the students. The application will also reject records having longer student ID’s.
 
-# Other Design Ideas that were Considered and Rejected
+# Other Design Ideas Considered and Rejected
 Considered using a JSP for front end (i.e, to get the file name in a text box instead of a command line argument). The reason for considering this approach is to make the project more presentable to the user. 
 
 * Reason for Rejection:
@@ -43,4 +48,4 @@ Though this approach does not require any command line to provide the input, it 
 
 # Enhancement:
 To process roster files of over 100K records or 1 million records:
-BatchUpdate method can be used instead of looping and updating every record. Through Batchupdate, all values of all the 100K records will be sent at once, instead of sending each and every record row by row.
+BatchUpdate method can be used instead of looping and updating every record. Through Batchupdate, all values of 100K records will be sent at once, instead of sending each and every record row by row.
