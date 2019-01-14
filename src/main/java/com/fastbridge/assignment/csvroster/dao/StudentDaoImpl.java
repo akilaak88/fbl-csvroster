@@ -76,10 +76,10 @@ public class StudentDaoImpl implements StudentDao {
 	 */
 	
 	@Override
-	public void deleteStudentDetails(int StudentId) {
+	public int deleteStudentDetails(int StudentId) {
 		
 		    int updatedRows = jdbcTemplate.update("delete from student where id=?",StudentId);
-		    logger.info("Number of Rows Deleted For Students" +updatedRows);
+		    return updatedRows;
 
 	}
 	

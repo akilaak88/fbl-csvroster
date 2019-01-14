@@ -8,6 +8,6 @@ public interface EnrollmentDao {
 	
 	public void updateOrInsertEnrollmentDetails(List<Enrollment> enrollmentList);
 	
-	public void deleteEnrollmentDetails(int studentId);
+	public int deleteEnrollmentDetails(int studentId);
 
 }

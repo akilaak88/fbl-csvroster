@@ -8,7 +8,7 @@ public interface StudentDao {
 	
 	public void updateOrinsertStudentDetails(List<Student> studentList);
 	
-	public void deleteStudentDetails(int StudentId);
+	public int deleteStudentDetails(int StudentId);
 	
 	public void getStudentCount();
 

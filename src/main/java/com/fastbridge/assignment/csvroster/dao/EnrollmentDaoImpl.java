@@ -36,7 +36,7 @@ public class EnrollmentDaoImpl implements EnrollmentDao {
 	@Transactional
 	public void updateOrInsertEnrollmentDetails(List<Enrollment> enrollmentList) {
 		int updatedRows = 0;
-
+		System.out.println("enrollmentList size" +enrollmentList.size());
 		for (Enrollment enrollment : enrollmentList) {
 
 			int i = jdbcTemplate.update(
@@ -53,7 +53,7 @@ public class EnrollmentDaoImpl implements EnrollmentDao {
 			updatedRows = updatedRows + i;
 		}
 
-		logger.info("Number of Rows Updated for Enrollment" + updatedRows);
+		logger.info("Number of Rows Updated for Enrollment : " + updatedRows);
 
 	}
 
@@ -64,10 +64,10 @@ public class EnrollmentDaoImpl implements EnrollmentDao {
 	 */
 
 	@Override
-	public void deleteEnrollmentDetails(int studentId) {
+	public int deleteEnrollmentDetails(int studentId) {
 
 		int updatedRows = jdbcTemplate.update("delete from enrollment where student_id=? ", studentId);
-		logger.info("Number of Rows Deleted for Enrollment" + updatedRows);
+		return updatedRows;
 	}
 
 }
