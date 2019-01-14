@@ -48,4 +48,4 @@ Though this approach does not require any command line to provide the input, it 
 
 # Enhancement:
 To process roster files of over 100K records or 1 million records:
-BatchUpdate method can be used instead of looping and updating every record. Through Batchupdate, all values of 100K records will be sent at once, instead of sending each and every record row by row.
+BatchUpdate method can be used instead of iterating through every record as all values of 100K/1M records will be sent at once, instead of sending each and every record row by row.
