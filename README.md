@@ -1,14 +1,14 @@
-## fbl-csvroster
+## FBL-CSVRoster
 
-The CSV Roster Application has been developed to import a classroom roster file(.csv file) provided through URL into a relational database. 
+CSV Roster Application has been developed to implement a classroom roster file(.csv file) through URL as a command line argument, into a relational database. 
 
-## The database contains three tables:
+# The database contains three tables:
 
 * Student (information about students)
 * Teacher (information about teachers)
 * Enrollment (information about which students are in which teachers' classes)
 
-
+# About
 This Application will take the URL of CSV file as a command-line argument, along with a flag to indicate whether it is a Delta import(Y/N). Then the following operations will be performed.
 * 1.	connect to the CSV file's URL
 * 2.	read the CSV file
