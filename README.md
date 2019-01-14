@@ -26,15 +26,20 @@ This Application will take the URL of a CSV file as a command-line argument, alo
 
 # Technical Details
 This application is developed using 
-* Spring Boot with Apache Maven for build
 
-* Language and JDK : Java 8
+* JDK: Java 8
+
+* Framework: Spring Boot
+
+* Build: Apache Maven
 
 * Database: MySQL
 
 * CSV Reader: Apache Commons CSV library
 
 * JDBC: For Database Connectivity
+
+* Testing Framework: JUnit
 
 # Assumptions
 -	The URL for CSV file should be public. If the CSV resides in a private URL or resides in a local directory, the file cannot be accessed through this application.
