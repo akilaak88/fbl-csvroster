@@ -16,3 +16,6 @@ This Application will take the URL of a CSV file as a command-line argument, alo
 5.	report a list of each teacher in the database, and a count of how many students are in a class held by that teacher
 6.	and then exit.
 7.	In addition - if any records are malformed, the program will provide an exception log of any records that it rejected.
+
+
+Design Document is available in https://github.com/akilaak88/fbl-csvroster/blob/master/Design%20Document.docx
