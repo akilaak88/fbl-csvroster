@@ -1,28 +1,8 @@
 ## FBL-CSVRoster
 
-CSV Roster Application has been developed to implement a classroom roster file(.csv file) through URL as a command line argument, into a relational database. 
-
-# The database contains three tables:
-
-* Student (information about students)
-* Teacher (information about teachers)
-* Enrollment (information about which students are in which teachers' classes)
-
-# About
-This Application will take the URL of CSV file as a command-line argument, along with a flag to indicate whether it is a Delta import(Y/N). Then the following operations will be performed.
-* 1.	connect to the CSV file's URL
-* 2.	read the CSV file
-* 3.	insert records into the database
-* 4.	report how many records were modified
-* 5.	report a list of each teacher in the database, and a count of how many students are in a class held by that teacher
-* 6.	and then exit.
-* 7.	In addition - if any records are malformed, the program will provide an exception log of any records that it rejected.
-
-
-For complete details of applicaiton check the [Design document](https://github.com/akilaak88/fbl-csvroster/blob/master/Design%20Document.docx)
-
 # Overview
-The CSV Roster Application is developed to import a classroom roster file (.csv file), provided via a URL, into a relational database. The database contains three tables:
+CSV Roster Application has been developed to implement a classroom roster file (.csv file), provided via a URL, into a relational database. 
+The database contains three tables:
 *	student (information about students)
 *	teacher (information about teachers)
 *	enrollment (information about which students are in which teachers' classes)
@@ -57,7 +37,8 @@ JDBC: For Database Connectivity
 
 # Other Design Ideas that were Considered and Rejected
 Considered using a JSP for front end (i.e, to get the file name in a text box instead of a command line argument). The reason for considering this approach is to make the project more presentable to the user. 
-Reason for Rejection:
+
+* Reason for Rejection:
 Though this approach does not require any command line to provide the input, it will not give a good looking output, since, there are lot a values to be displayed as the output. Also, for huge number of records, the user should stay in the same page without refreshing or hitting the back button. If by any chance, the user closes the screen, the session will ended and the program will be exited.
 
 # Enhancement:
